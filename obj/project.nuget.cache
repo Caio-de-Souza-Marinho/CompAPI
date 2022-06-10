@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "SMtZfaBSpqhj1P8BXCyRh8XJxyc0TaAId5oe6sMR9nKnSYwQW15mnmecGfWI1XgOazqeqorvckFwmHuXbB/YRg==",
+  "dgSpecHash": "IisNTGEUcXaB1tlJyoahINVkeI+UOiVZM9KKdyjk1jGgF2Tp14X1qFEmALVM22lhaQ7mpyW+pKbhykoH4Qhfuw==",
   "success": true,
   "projectFilePath": "D:\\caio2ds\\ds\\CompAPI\\CompAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
+    "C:\\Users\\Aluno\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.data.sqlclient\\4.1.0\\microsoft.data.sqlclient.4.1.0.nupkg.sha512",
