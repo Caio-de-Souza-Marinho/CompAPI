@@ -1,5 +1,8 @@
+using Dapper.Contrib.Extensions;
+
 namespace CompAPI.Models
 {
+    [Table("TB_PARTICIPANTE")]
     public class Participante
     {
         public int Id { get; set; }
