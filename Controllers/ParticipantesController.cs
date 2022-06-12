@@ -42,7 +42,26 @@ namespace CompAPI.Controllers
         }
     }
  
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetByIdAsync(int id)
+    {
+        Participante p = null;
+        using (IDbConnection conexao = ConnectionFactory.GetStringConexao(_config))
+        {
+            conexao.Open();
 
+            StringBuilder sql = new StringBuilder();
+            sql.Append("SELECT ID as Id, ID_TIPO_PARTICIPANTE as TipoId, TX_NOME as Nome, TX_CPF as Cpf , ");
+            sql.Append("TX_EMAIL as Email FROM TB_PARTICIPANTE WHERE ID = @Id ");
+
+            p = await conexao.QueryFirstOrDefaultAsync<Participante>(sql.ToString(), new {Id = id});
+
+            if (p != null)
+                return Ok(p);
+            else
+                return NotFound("Participante não encontrado");
+        }
+    }
 
 
 

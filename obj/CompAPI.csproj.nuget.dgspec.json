@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\caio2ds\\ds\\CompAPI\\CompAPI.csproj": {}
+    "C:\\etec\\2modulo\\DS\\csharp\\CompAPI\\CompAPI.csproj": {}
   },
   "projects": {
-    "D:\\caio2ds\\ds\\CompAPI\\CompAPI.csproj": {
+    "C:\\etec\\2modulo\\DS\\csharp\\CompAPI\\CompAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\caio2ds\\ds\\CompAPI\\CompAPI.csproj",
+        "projectUniqueName": "C:\\etec\\2modulo\\DS\\csharp\\CompAPI\\CompAPI.csproj",
         "projectName": "CompAPI",
-        "projectPath": "D:\\caio2ds\\ds\\CompAPI\\CompAPI.csproj",
-        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "D:\\caio2ds\\ds\\CompAPI\\obj\\",
+        "projectPath": "C:\\etec\\2modulo\\DS\\csharp\\CompAPI\\CompAPI.csproj",
+        "packagesPath": "C:\\Users\\leonc\\.nuget\\packages\\",
+        "outputPath": "C:\\etec\\2modulo\\DS\\csharp\\CompAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\leonc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -76,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
         }
       }
     }
