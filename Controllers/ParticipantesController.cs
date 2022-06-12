@@ -83,6 +83,34 @@ namespace CompAPI.Controllers
             return Ok(p);
         }
 
+        [HttpPut]
+        public async Task<ActionResult> UpdateAsync(Participante p)
+        {
+            using (IDbConnection conexao = ConnectionFactory.GetStringConexao(_config))
+            {
+                conexao.Open();
+
+                StringBuilder sql = new StringBuilder();
+                sql.Append("UPDATE TB_PARTICIPANTE SET ");
+                sql.Append("ID_TIPO_PARTICIPANTE = @TipoId, TX_NOME = @Nome, TX_CPF = @Cpf, TX_EMAIL = @Email ");
+                sql.Append("WHERE ID = @Id ");
+
+                int linhasAfetadas = await conexao.ExecuteAsync(sql.ToString(), p);
+                return Ok(p);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
