@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "AL0JpgcL3VPuTXVfMsGhAslf5AzzI50QACvGUiRxQJ9tf2hdj6bzEfTLaBN2qXKN/MEwx/a+TGfBuCVMI0aSWg==",
+  "dgSpecHash": "wF+SQ489olwEqK0aNEPO+XbijKCFcyEp1kU+TnkXtw+xBrWkaxFfmdjvGBrfl0T7Fp369Gbh26KGtwCJisLPFw==",
   "success": true,
   "projectFilePath": "C:\\etec\\2modulo\\DS\\csharp\\CompAPI\\CompAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leonc\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\leonc\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
     "C:\\Users\\leonc\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\leonc\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
     "C:\\Users\\leonc\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\leonc\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\leonc\\.nuget\\packages\\microsoft.data.sqlclient\\4.1.0\\microsoft.data.sqlclient.4.1.0.nupkg.sha512",
