@@ -103,3 +103,9 @@ C:\etec\2modulo\DS\csharp\CompAPI\obj\Debug\net5.0\ref\CompAPI.dll
 C:\etec\2modulo\DS\csharp\CompAPI\obj\Debug\net5.0\CompAPI.pdb
 C:\etec\2modulo\DS\csharp\CompAPI\obj\Debug\net5.0\CompAPI.genruntimeconfig.cache
 C:\etec\2modulo\DS\csharp\CompAPI\bin\Debug\net5.0\Dapper.Contrib.dll
+D:\caio2ds\ds\CompAPI\bin\Debug\net5.0\publish\web.config
+D:\caio2ds\ds\CompAPI\bin\Debug\net5.0\publish\appsettings.Development.json
+D:\caio2ds\ds\CompAPI\bin\Debug\net5.0\publish\appsettings.json
+D:\caio2ds\ds\CompAPI\bin\Debug\net5.0\publish\CompAPI.deps.json
+D:\caio2ds\ds\CompAPI\bin\Debug\net5.0\publish\CompAPI.runtimeconfig.json
+D:\caio2ds\ds\CompAPI\bin\Debug\net5.0\Dapper.Contrib.dll
