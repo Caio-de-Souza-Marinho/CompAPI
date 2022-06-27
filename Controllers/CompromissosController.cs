@@ -104,8 +104,20 @@ namespace CompAPI.Controllers
             }
         }
 
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteAsync(int id)
+        {
+            using (IDbConnection conexao = ConnectionFactory.GetStringConexao(_config))
+            {
+                conexao.Open();
+                StringBuilder sql = new StringBuilder();
+                sql.Append("DELETE FROM TB_COMPROMISSO ");
+                sql.Append("WHERE ID = @Id ");
 
-
+                int linhasAfetadas = await conexao.ExecuteAsync(sql.ToString(), new { Id = id });
+                return Ok(linhasAfetadas);
+            }
+        }
 
 
 
