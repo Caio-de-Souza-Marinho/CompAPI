@@ -66,21 +66,27 @@ namespace CompAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> InsertAsync(Compromisso c)
         {
-            using (IDbConnection conexao = ConnectionFactory.GetStringConexao(_config))
+            if (ModelState.IsValid)
             {
-                conexao.Open();
+                using (IDbConnection conexao = ConnectionFactory.GetStringConexao(_config))
+                {
+                    conexao.Open();
 
-                StringBuilder sql = new StringBuilder();
-                sql.Append("INSERT INTO TB_COMPROMISSO (ID_TIPO_COMPROMISSO, TX_DESCRICAO, TX_LOCALIZACAO, DT_INICIO, DT_TERMINO, FL_VISIVEL) ");
-                sql.Append("VALUES (@TipoCompromissoId, @Descricao, @Localizacao, @DataInicio, @DataTermino, @Visivel) ");
-                sql.Append("SELECT CAST(SCOPE_IDENTITY() AS INT) ");
+                    StringBuilder sql = new StringBuilder();
+                    sql.Append("INSERT INTO TB_COMPROMISSO (ID_TIPO_COMPROMISSO, TX_DESCRICAO, TX_LOCALIZACAO, DT_INICIO, DT_TERMINO, FL_VISIVEL) ");
+                    sql.Append("VALUES (@TipoCompromissoId, @Descricao, @Localizacao, @DataInicio, @DataTermino, @Visivel) ");
+                    sql.Append("SELECT CAST(SCOPE_IDENTITY() AS INT) ");
 
-                object o = await conexao.ExecuteScalarAsync(sql.ToString(), c);
+                    object o = await conexao.ExecuteScalarAsync(sql.ToString(), c);
 
-                if (o != null)
-                    c.Id = Convert.ToInt32(o);
+                    if (o != null)
+                        c.Id = Convert.ToInt32(o);
+                }
+                return Ok(c);
             }
-            return Ok(c);
+            else
+                return BadRequest(ModelState);
+            
         }
 
         [HttpPut]
