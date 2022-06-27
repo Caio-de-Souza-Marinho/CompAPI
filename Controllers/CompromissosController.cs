@@ -71,19 +71,38 @@ namespace CompAPI.Controllers
                 conexao.Open();
 
                 StringBuilder sql = new StringBuilder();
-                sql.Append("INSERT INTO TB_COMPROMISSO (ID_TIPO_COMPROMISSO, TX_DESCRICAO, TX_LOCALIZACAO, DT_INICIO, DT_TERMINO, FL_VISIVEL) "); 
-                sql.Append("VALUES (@TipoCompromissoId, @Descricao, @Localizacao, @DataInicio, @DataTermino, @Visivel) "); 
+                sql.Append("INSERT INTO TB_COMPROMISSO (ID_TIPO_COMPROMISSO, TX_DESCRICAO, TX_LOCALIZACAO, DT_INICIO, DT_TERMINO, FL_VISIVEL) ");
+                sql.Append("VALUES (@TipoCompromissoId, @Descricao, @Localizacao, @DataInicio, @DataTermino, @Visivel) ");
                 sql.Append("SELECT CAST(SCOPE_IDENTITY() AS INT) ");
 
                 object o = await conexao.ExecuteScalarAsync(sql.ToString(), c);
-                
+
                 if (o != null)
                     c.Id = Convert.ToInt32(o);
             }
             return Ok(c);
         }
 
+        [HttpPut]
+        public async Task<ActionResult> UpdateAsync(Compromisso c)
+        {
+            using (IDbConnection conexao = ConnectionFactory.GetStringConexao(_config))
+            {
+                conexao.Open();
+                StringBuilder sql = new StringBuilder();
+                sql.Append("UPDATE TB_COMPROMISSO SET ");
+                sql.Append("ID_TIPO_COMPROMISSO = @TipoCompromissoId, ");
+                sql.Append("TX_DESCRICAO = @Descricao, ");
+                sql.Append("TX_LOCALIZACAO = @Localizacao, ");
+                sql.Append("DT_INICIO = @DataInicio, ");
+                sql.Append("DT_TERMINO = @DataTermino, ");
+                sql.Append("FL_VISIVEL = @Visivel ");
+                sql.Append("WHERE ID = @Id ");
 
+                int linhasAfetadas = await conexao.ExecuteAsync(sql.ToString(), c);
+                return Ok(c);
+            }
+        }
 
 
 
